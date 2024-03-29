@@ -1,0 +1,35 @@
+[
+    [
+        {
+            "text": "Great user experience! The podcast app provided me access to a plethora of interesting episodes. Easy navigation and convenient features help me discover and listen to new podcasts effortlessly.",
+            "photo": "assets/img/Mia.png",
+            "name": "Mia Winters,",
+            "platform": "assets/img/icons-sprite.svg#spotify",
+            "platformTitle": "Spotify"
+        },
+        {
+            "text": "I use the podcast app every day, and it's always a pleasant experience! Thanks to its intuitive interface, I quickly find and listen to my favorite shows, no matter where I am.",
+            "photo": "assets/img/Emili.png",
+            "name": "Emily Blunt,",
+            "platform": "assets/img/icons-sprite.svg#googlePodcast",
+            "platformTitle": "Google Podcasts"
+        },
+        {
+            "text": "The podcast app has become indispensable to me. Its extensive library and user-friendly design make it easy for me to explore and enjoy a wide range of podcasts on various topics.",
+            "photo": "assets/img/Luna.png",
+            "name": "Luna lovegood,",
+            "platform": "assets/img/icons-sprite.svg#applePodcast",
+            "platformTitle": "Apple Podcasts"
+        }
+    ],
+    [
+        {
+            "text": "One of the best daily podcasts that covers every topic on Spotify.",
+            "photo": "assets/img/avatar-quote.png",
+            "name": "John Smith,",
+            "platform": "assets/img/icons-sprite.svg#spotify",
+            "position": "Social Community Manager"
+        }
+
+    ]
+]

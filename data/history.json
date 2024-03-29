@@ -1,0 +1,14 @@
+[
+    {
+        "photo": "assets/img/avatar2.png",
+        "post": "Host 1",
+        "name": "Porter Severus",
+        "description": "With a wealth of experience in production, Porter spearheads Pod of Cast's creative direction."
+    },
+    {
+        "photo": "assets/img/avatar1.png",
+        "post": "Host 2",
+        "name": "Marques Keith",
+        "description": "Marques Keith is the driving force behind Pod of Cast's community building and content curation."
+    }
+]

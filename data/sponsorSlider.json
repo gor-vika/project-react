@@ -1,0 +1,17 @@
+[
+    {
+        "logo": "assets/img/Google-Podcast.png",
+        "title":"Google Podcast",
+        "description": "Explore a world of audio content with Google Podcasts. Dive into a diverse array of shows and genres, from captivating storytelling to insightful discussions."
+    },
+    {
+        "logo": "assets/img/Spotify.png",
+        "title":"Spotify",
+        "description": "Experience the best of podcasting with Spotify. Dive into a vast library of shows spanning every topic imaginable, from pop culture to science and beyond."
+    },
+    {
+        "logo": "assets/img/Youtube.png",
+        "title":"Youtube",
+        "description": "Unlock a new dimension of podcasting with YouTube. Immerse yourself in audio-visual storytelling as you explore a wide range of podcasts and interviews."
+    }
+]
