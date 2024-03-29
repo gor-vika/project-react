@@ -1,0 +1,49 @@
+[
+    {
+        "title": "Member",
+        "text": "Affordable access to exclusive content and community perks.",
+        "price": "$9.99",
+        "optionTitle": "What’s included:",
+        "options": [
+            {
+                "opt1": "Exclusive Content",
+                "opt2": "5% Discount on Merch",
+                "opt3": "Join the Community",
+                "opt4": "Livestreaming Access"
+            }
+        ]
+    },
+    {
+        "title": "Family",
+        "text": "Enjoy exclusive perks and content for your entire household.",
+        "price": "$14.99",
+        "optionTitle": "What’s included:",
+        "options": [
+            {
+                "opt1": "Everything in Tier 1",
+                "opt2": "Free tickets to Events",
+                "opt3": "Limited Edition Merch",
+                "opt4": "Promote your Product",
+                "opt5": "Request Topic"
+            }
+        ]
+    },
+    {
+        "title": "Official",
+        "text": "Unlock premium access and benefits tailored for dedicated supporters.",
+        "price": "$29.99",
+        "optionTitle": "What’s included:",
+        "options": [
+            {
+                "opt1": "Everything in Tier 2",
+                "opt2": "Exclusive Badge on Livestreaming",
+                "opt3": "Become an Official Sponsor",
+                "opt4": "Early Access to All Episodes",
+                "opt5": "Free Stickers and Merch"
+            }
+        ]
+    }
+]
+
+
+

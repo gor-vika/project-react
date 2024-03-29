@@ -1,0 +1,52 @@
+.hero-section.about{
+    padding-bottom: 0;
+}
+.btn-wrapper {
+    text-align: center;
+    &> .btn-block{
+        display: inline-block;
+        &:first-child{
+            margin-right: 20px;
+        }
+    }
+}
+.statistic{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%);
+    margin-top: -105px;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 125px;
+        height: 120px;
+        background-image: url(../img/vector4.svg);
+        top: 0;
+        right: 0;
+        transform: translate(110%, 50%);
+    }
+    &-block{
+        border: 1.50px solid $black;
+        border-radius: 0.5rem;
+        box-shadow: 6px 6px 0 0 $vermillion;
+        background: #fff;
+        padding: 59px 94px;
+        text-align: center;
+        color: $davys-grey;
+        .statistic-title{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            font-size: 3.69rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: $vermillion;
+            margin-bottom: 20px;
+            & > span{
+                color: $black;
+            }
+        }
+    }
+}

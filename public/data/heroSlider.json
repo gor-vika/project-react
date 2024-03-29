@@ -1,0 +1,22 @@
+[
+    {
+        "image": "./assets/img/bus.png",
+        "title": "Tesla Autopilot"
+    },
+    {
+        "image": "./assets/img/tree-human.png",
+        "title": "Self–confidence"
+    },
+    {
+        "image": "./assets/img/girl.png",
+        "title": "Perplexed Mind"
+    },
+    {
+        "image": "./assets/img/group-people.png",
+        "title": "Women’s Rights"
+    },
+    {
+        "image": "./assets/img/shop-basket.png",
+        "title": "Social Class" 
+    }
+]

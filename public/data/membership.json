@@ -1,0 +1,32 @@
+[
+    {
+        "image": "assets/img/icons-sprite.svg#scribble",
+        "title": "Topic by Request",
+        "text": "You can suggest and vote for topics that interest you, and our team is ready to create episodes tailored to your requests. Get access to personalized content that matters to you!"
+    },
+    {
+        "image": "assets/img/icons-sprite.svg#shining-stars",
+        "title": "Exclusive Content",
+        "text": "Enjoy exclusive insights, discussions, and experiences that enrich your membership and deepen your engagement with our platform. Unlock a world of exclusive content created just for you."
+    },
+    {
+        "image": "assets/img/icons-sprite.svg#face-1",
+        "title": "Join the Community",
+        "text": "Be part of our vibrant podcast community. Connect with fellow enthusiasts, participate in discussions, and gain access to exclusive events and content. Join us today!"
+    },
+    {
+        "image": "assets/img/icons-sprite.svg#face-5",
+        "title": "Livestreaming Access",
+        "text": "Experience real-time discussions, Q&A sessions, and behind-the-scenes content with your favorite podcasters. Join now for an immersive experience!"
+    },
+    {
+        "image": "assets/img/icons-sprite.svg#fire",
+        "title": "Exclusive Episodes & Merch",
+        "text": "Dive deeper into your favorite topics and show your support for our podcast community with exclusive content and merchandise offerings. Join now to access these exciting perks!"
+    },
+    {
+        "image": "assets/img/icons-sprite.svg#star",
+        "title": "And much more!",
+        "text": "Explore a world of additional benefits and perks when you join our community, including exclusive events, behind-the-scenes access, member-only discounts, and much more!"
+    }
+]

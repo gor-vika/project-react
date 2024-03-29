@@ -1,0 +1,97 @@
+.section.blue{
+    background-color: $alice-blue;
+}
+
+.subtitle.sub-text{
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    &.feedback::before{
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: url(../img/sparkle.svg);
+        width: 81px;
+        height: 81px;
+    }
+}
+.subtitle-text{
+    text-align: center;
+    font-size: 1.44rem;
+    color: $davys-grey;
+    margin-bottom: 100px;
+}
+.slick-slider .slick-list .slick-track .slick-slide {
+    height: 100%; 
+    
+}
+
+.slick-slider .slick-prev,
+.slick-slider .slick-next{
+    position: absolute;
+    top: calc(100% + 60px);
+    width: 48px;
+    height: 48px;
+    border: 2.5px solid $black;
+    border-radius: 50%;
+    &::before{
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        margin-inline: auto;
+        border-top: 2.5px solid $black;
+        border-left: 2.5px solid $black;
+        rotate: -45deg;
+    } 
+    &:hover{
+        border: 2.5px solid $vermillion;
+        &::before{
+            border-top: 2.5px solid $vermillion;
+        border-left: 2.5px solid $vermillion;
+        }
+    }
+}
+.slick-slider .slick-next{
+    left: 40px;
+    &::before{
+        rotate: 135deg;
+    }
+}
+.slick-slide{
+    padding: 0 10px;  
+}
+.quote.feedback-slider{
+    background-color: transparent;
+    width: 100%;
+    padding: 0;
+    position: relative;  
+    .feedback-item{   
+        width: min(95%, 570px);  
+        padding: 132px 40px 40px;
+        // margin-right: 20px;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        position: relative;
+        min-height: 455px; 
+        overflow: hidden;
+        display: inline-flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        .quote-text{
+            font-size: 1.44rem;
+            text-align: left;
+            font-family: 'Montserrat Alternates', sans-serif;
+            &::before{
+                top: -92px;
+                left: 0;
+                transform: translate(0);
+            }
+        }
+        .quote-author{
+            justify-content: start;
+        }
+    }
+}

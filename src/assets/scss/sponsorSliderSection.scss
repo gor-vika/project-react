@@ -1,0 +1,25 @@
+.sponsor-block{
+    background-color: #fff;
+    border: 1.61px solid $black;
+    border-radius: 0.75rem;
+    padding: 40px 50px 30px;
+    width: min(95%, 570px);
+    min-height: 245px;
+    text-align: center;
+    .sponsor-logo{     
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-bottom: 0.5px solid $davys-grey;
+        margin-bottom: 30px;
+        img{
+            width: 52%;
+            aspect-ratio: 300/54;
+            object-fit: contain;
+        }
+    }
+    .sponsor-desc{
+        font-size: 0.88rem;
+        color: $davys-grey;
+    }
+}

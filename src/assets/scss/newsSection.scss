@@ -1,0 +1,116 @@
+.no-scribble::after{
+    display: none;
+}
+.news-list{
+    grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+    gap: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    &::before{
+        content: '';
+        width: 185px;
+        height: 185px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -40%);
+        background-image: url(../img/star.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &::after{
+        content: '';
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate(60%, 70%);
+        background-image: url(../img/scribble-black.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+.news-item{
+    border: 2px solid $black;
+    border-radius: 0.5rem;
+    padding: 16px;
+    transition: all .2s ease;
+    z-index: 2;
+    &:hover{
+        box-shadow: 10px 10px 0 0 #000;
+        .news-title{
+            color: $vermillion;
+        }
+    }
+    .flex{
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .img-wrapper{
+        width: 100%;
+        img{
+            width: 100%;
+            aspect-ratio: 538/320;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+    }
+    .news-title{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 2.31rem;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        color: $black;
+        margin-bottom: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: normal; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        height: 2.8em;
+        
+    }
+    .news-desc{
+        font-size: 0.88rem;
+        color: $davys-grey;
+        margin-bottom: 26px;      
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: normal; 
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        -webkit-box-orient: vertical;
+        max-height: 4.8em;
+    }
+    .news-bootom-tags{
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+        border-top: 0.5px solid $davys-grey;
+        .news-tag{
+            border: 1px solid $vermillion;
+            border-radius: 0.5rem;
+            padding: 0.35rem 1rem;
+            background-color: #fff;
+            a{
+                text-decoration: none;
+                font-family: 'Montserrat Alternates SemiBold', sans-serif;
+                color: $vermillion;
+            }
+            &:hover{
+                background-color: $vermillion;
+                a{
+                    color: #fff;
+                }
+            }
+        }
+        .news-date{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            font-size: 0.75rem;
+        }
+        
+    }
+}

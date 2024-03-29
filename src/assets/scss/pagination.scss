@@ -1,0 +1,29 @@
+.pagination-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: -35px;
+    margin-bottom: 80px;
+    .pagination{
+        display: inline-flex;
+        .page-item{
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            &:hover button,
+            &.active button{
+                color: $vermillion;
+            }
+            .page-link{
+                font-size: 1.4rem;
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                border: none;
+                color: $davys-grey;
+                font-family: "Montserrat Alternates Medium", sans-serif;
+            }
+        }
+    }
+    
+
+}

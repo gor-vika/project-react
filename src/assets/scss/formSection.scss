@@ -1,0 +1,109 @@
+.form::before{
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 3%;
+    width: 125px;
+    height: 120px;
+    background-image: url(../img/vector4.svg);
+    background-repeat: no-repeat;
+
+}
+.form::after{
+    content: '';
+    position: absolute;
+    bottom: 70%;
+    left: 85%;
+    width: 78px;
+    height: 78px;
+    background-image: url(../img/shining-stars.svg);
+    background-repeat: no-repeat;
+
+}
+
+.form .subtitle-text{
+    margin-bottom: 60px;
+}
+.contacts-title::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 68px;
+    height: 24px;
+    background-image: url(../img/contacts-vector.svg);
+    background-repeat: no-repeat;
+
+}
+.contacts-form{
+    border-top: 0.5px solid $davys-grey;
+    padding-top: 40px;
+    &.container{
+        width: min(90%, 766px);
+    }
+    
+    .form-column{
+        width: calc(373/766 * 100%);
+    }
+    .input-block{
+        margin-bottom: 22px;
+    }
+    .form-title{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 0.88rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 16px;
+        & span{
+            position: relative;
+            &::after{
+                content: '*';
+                color: $vermillion;
+                position: absolute;
+                top: 0;
+                right: -10px;
+    
+            }
+        }
+    }
+    .form-input, textarea{
+        width: 100%;
+        border: 1.50px solid $black;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: $davys-grey;
+        padding: 19px 20px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        outline: none;
+        transition: all .2s ease;
+        &:focus{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            color: $black;
+            border-color: $vermillion;
+        }
+        &.has-error{
+            background-color: rgba($color: red, $alpha: 0.2);
+            border-color: red;
+        }
+    }
+    .textarea-block{
+        margin-bottom: 60px;
+    }
+    .form-button > div{
+        width: 33%;
+        font-size: 0.88rem;
+        &:last-child{
+            padding-left: 70px;
+        }
+        span{
+            color: $vermillion;
+        }
+    }
+    .error-message{
+        height: 18px;
+        color: red;
+        font-size: 0.8rem;
+        padding-left: 21px;
+    }
+}

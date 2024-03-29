@@ -1,0 +1,111 @@
+.section{
+    padding: 140px 0;
+    position: relative;
+    &.white{
+        background-color: #fff;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background-image: url(../img/Scribble-bottom-sect.svg);
+        width: 150px;
+        height: 150px;
+        z-index: 2;
+    }
+    .subtitle{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 3.69rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    .talk-listen-block{
+        width: 40.7%;
+        text-align: center;
+        margin-bottom: 120px;
+        svg{
+            width: 275px;
+            aspect-ratio: 1;
+            margin-bottom: 34px;
+        }
+    }
+}
+.quote{
+    background-color: $champagne;
+    padding: 136px 16% 40px;
+    .quote-text{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 2.31rem;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+        &::before{
+            content: '“';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            font-size: 6rem;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: $vermillion;
+        }
+    }
+    .quote-author{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        .photo img{
+            border-radius: 6.19rem;
+        }
+        .icon{
+            width: 18px;
+            height: 18px;
+            svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .position{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+        }
+    }
+}
+.quote-sect{
+    position: relative;
+    &::before{
+        content: '';
+        background-image: url(../img/vector4.svg);
+        width: 124px;
+        height: 124px;
+        position: absolute;
+        left: -60px;
+        bottom: 50px;
+        z-index: 2;
+    }
+    &::after{
+        content: '';
+        background-image: url(../img/star4.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 150px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(30%, -28%);
+        z-index: 2;
+    }
+
+}

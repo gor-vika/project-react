@@ -1,0 +1,86 @@
+.section.download-sect{
+    font-size: .88rem;
+    text-align: center;
+    background-image: url(../img/Home.png),
+    url(../img/play.png);
+    background-repeat: no-repeat;
+    background-size: 30.5%, 26.5%; 
+    background-position: left bottom, right bottom;
+    z-index: 4;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        transform: translate(-30%, -50%);
+        background-image: url(../img/Vector-hero-sect.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 150px;
+        height: 150px;
+        
+    }
+    &::after{ 
+        display: none;
+    }
+    .pre-title{
+        font-size: 0.88rem;
+        color: $vermillion;
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        border: 1px solid $vermillion;
+        border-radius: 0.25rem;
+        padding: 0.19rem 0.38rem;
+    }
+    .subtitle{
+        padding: 23px 26% 0;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 80%;
+            left: -12%;
+            background-image: url(../img/sparkle-group.svg);
+            background-repeat: no-repeat;
+            width: 230px;
+            height: 194px;
+        }
+    }
+    .subtitle-text{
+        margin-bottom: 140px;
+    }
+    .btn-section{
+        margin-bottom: 24px;
+        position: relative;
+        display: inline-block;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            background-image: url(../img/sparkle.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 120px;
+            height: 120px;
+            z-index: -1;
+        }
+    }
+
+    .download-text{
+        color: $davys-grey;
+        margin-bottom: 10px;
+    }
+}
+.download-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    &> li{
+        display: inline-flex;
+        width: 24px;
+        height: 24px;
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
+        }
+    }
+}

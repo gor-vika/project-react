@@ -1,0 +1,147 @@
+.feedback-img-wrapper{
+    position: relative;
+    margin-bottom: 60px;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        background-image: url(../img/vector-3.svg);
+        width: 425px;
+        height: 333px;
+    }
+    img{
+        border-radius: 0.5rem;
+    }
+}
+.title-wrap{
+    width: 100%;
+    text-align: center;
+}
+.about-subtitle{
+    font-family: 'Montserrat Alternates Bold', sans-serif;
+    font-size: 2.31rem;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    &.feedback::before{
+        content: '';
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        top: -110%;
+        left: 0;
+        transform: translateX(-70%);
+        background-image: url(../img/sparkle-half.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &.founder::after{
+        content: '';
+        width: 99px;
+        height: 99px;
+        position: absolute;
+        top: -110%;
+        right: 0;
+        transform: translateX(50%);
+        background-image: url(../img/scribble.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.textcols {
+	column-width: 49%;
+	column-count: 2;
+	column-gap: 2%;
+    color: $davys-grey;
+    padding-bottom: 81px;
+    border-bottom: 0.5px solid $davys-grey;
+    margin-bottom: 100px;
+    & p:not(:last-child){
+        margin-bottom: 15px;
+    }
+}
+.founder-wrap{
+    align-items: stretch;
+}
+.founder-block{
+    width: 49%;
+    border: 2px solid $black;
+    border-radius: 0.5rem;
+    box-shadow: 10px 10px 0 0 $black;
+    padding: 16px;
+    position: relative;
+}
+.first-founder::after, 
+.second-founder::after
+{
+    content: "";
+    display: block;
+    width: 130px;
+    height: 130px; 
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.first-founder::after{
+    background-image: url(../img/face-1.svg);
+}
+.second-founder::after{
+    background-image: url(../img/star.svg);
+}
+.founder-text{
+    width: 47%;
+    padding: 250px 0 20px;
+    span{
+        font-size: 0.88rem;
+        margin-bottom: 6px;
+    }
+    .founder-name{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 2.31rem;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 20px;
+    }
+    .founder-desc{
+        font-size: 0.88rem;
+        color: $davys-grey;
+        margin-bottom: 20px;
+    }
+}
+.founder-img{
+    width: 45%;
+    height: 100%;
+    img{
+        display: block;
+        border-radius: 0.5rem;
+        object-position: right bottom;
+    }
+}
+.founder-soc-list {
+    border-top: 0.5px solid $davys-grey;
+    text-align: right;
+    & > li{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        &:first-child{
+            margin-right: 20px;
+        }
+        &:not(:first-child){
+            &:hover{
+                scale: 1.2;
+            }
+        }
+        a svg{
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    
+    }
+}

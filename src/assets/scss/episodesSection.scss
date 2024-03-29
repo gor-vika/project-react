@@ -1,0 +1,111 @@
+.beige{
+    background-color: $champagne;
+    .pagination-wrap{
+        display: none;
+    }
+}
+.grid{
+    display: grid;
+    
+}
+.episodes-list{ 
+    grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+    gap: 20px;
+    margin-bottom: 100px;
+    position: relative;
+    &::after{
+        content: '';
+        width: 126px;
+        height: 121px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(70%, -90%);
+        background-image: url(../img/sparkle-half-2.svg);
+    }
+    .flex{
+        align-items: flex-start;
+    }
+    .episode-item{
+        background-color: #fff;
+        border: 2px solid $black;
+        border-radius: 0.75rem;
+        padding: 16px;
+        position: relative;
+        transition: all .2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        &.flex{
+            gap: 20px;
+        }
+        &:hover{
+            box-shadow: 10px 10px 0 0 $pewter-blue;
+            .episode-title{
+                color: $vermillion;
+            }
+        }
+    }
+    .img-wrapper{
+        width: calc(166/570*100%);
+        img{
+            border-radius: 0.5rem;
+            width: 100%;
+            aspect-ratio: 1;
+        }
+    }
+    .text-content{
+        width: calc(352/570*100%);
+        flex-wrap: wrap;
+    }
+    .episode-title{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 1.44rem;
+        line-height: 1.4;
+        color: $black;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .episode-desc{
+        // height: 50px;
+        font-size: 0.88rem;
+        line-height: 1.6;
+        color: $davys-grey;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        border-top: 0.5px solid $davys-grey;
+        padding-top: 10px;
+    }
+}
+.episode-tag{
+    border: 1px solid $davys-grey;
+    border-radius: 0.25rem;
+    padding: 0.38rem 0.75rem;
+    display: inline-block;
+    
+}
+.episode-duration{
+    font-family: 'Montserrat Alternates Bold', sans-serif;
+    color: $vermillion;
+    border: none;
+}
+.episode-play{
+    margin-bottom: 15px;
+    border-radius: 1rem;
+    background-color: #fff;
+    border: 1.5px solid $vermillion;
+    a{
+        color: $vermillion;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 5px 10px;
+    } 
+    &:hover {
+        background-color: $vermillion;
+        a{
+            color: #fff;
+        }
+    }
+}

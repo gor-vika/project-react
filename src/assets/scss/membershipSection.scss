@@ -1,0 +1,25 @@
+.benefits{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    gap: 20px;
+    text-align: center;
+    .benefit-item{
+        padding: 0 18px;
+        margin-bottom: 80px;
+    }
+    .benef-img-wrap{
+        width: 78px;
+        height: 78px;
+        margin-bottom: 30px;
+    }
+    .benef-title{
+        font-family: 'Montserrat Alternates Bold', sans-serif;
+        font-size: 1.44rem;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    } 
+}
+.btn-block.btn-section{
+    margin-bottom: 0;
+}

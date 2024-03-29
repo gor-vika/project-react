@@ -1,0 +1,126 @@
+.sponsor-sect::after{
+    display: none;
+}
+.subtitle.sponsor{
+    position: relative;
+    z-index: 4;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-20%, -10%);
+        background-image: url(../img/sparkle.svg);
+        background-repeat: no-repeat;
+        width: 120px;
+        height: 120px;
+        z-index: -1;
+    }
+   
+}
+
+.price-block{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 25%);
+        background-image: url(../img/Vector4-blue.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 120px;
+        height: 120px;
+        z-index: -1;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        background-image: url(../img/star4.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 210px;
+        height: 220px;
+        z-index: -1;
+        
+    }
+    .price-item-wrap > div{
+        background-color: #fff;
+    }
+    .price-item-wrap:hover > div{
+        border: 1.50px solid $vermillion;
+        background-color: $champagne;
+    }
+    .price-item{
+        padding: 60px 40px 24px;
+        border: 1.50px solid $black;
+        border-radius: 0.5rem;
+        margin-bottom: 20px;
+        &.price-details{
+            padding: 40px 30px 50px;
+            min-height: 314px;
+        }
+        
+        .price-title{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            font-size: 2.31rem;
+            line-height: 1.4;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            position: relative;
+            &.popular::after{
+                content: 'MOST POPULAR';
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateY(50%);
+                border: 1px solid $vermillion;
+                border-radius: 0.25rem;
+                padding: 0.19rem 0.38rem;   
+                font-size: 0.75rem;
+                background-color: $vermillion;
+                color: #fff;
+            }
+        }
+        .price-desc{
+            font-size: 0.88rem;
+            color: $davys-grey;
+            margin-bottom: 90px;
+        }
+        .btn-block.btn-section .main-btn{
+            padding: 20px 36px;
+        }
+        .price{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            font-size: 1.44rem;
+            line-height: 1.4;
+            color: $vermillion;
+            span{
+                font-size: 0.88rem;
+                color: #4d4d4d;
+                display: block;
+            }
+        }
+        .benef-title{
+            font-family: 'Montserrat Alternates Bold', sans-serif;
+            margin-bottom: 20px;
+            font-size: 0.88rem;
+            color: $davys-grey;
+        }
+        .benef-desc {
+            list-style:disc;
+            padding-left: 15px;
+            &> li{
+                margin-bottom: 10px;
+            }
+        }   
+    }
+}
