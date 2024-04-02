@@ -1,14 +1,21 @@
+
 [
     {
-        "photo": "assets/img/avatar2.png",
-        "post": "Host 1",
-        "name": "Porter Severus",
-        "description": "With a wealth of experience in production, Porter spearheads Pod of Cast's creative direction."
+        "title": "About and History",
+        "text": "<p> Welcome to our podcast journey!</p> <p><b>Pod of Cast</b> is a platform dedicated to bringing you the best in podcasting entertainment. Our mission is simple: to create compelling content that resonates with our listeners and fosters a sense of community.</p><p><b>Pod of Cast</b> was founded in [year] by a group of passionate individuals who shared a common love for podcasts. What started as a small passion project has grown into a thriving community of podcast enthusiasts from around the world.</p><p>Over the years, we've produced a diverse range of podcasts covering topics ranging from pop culture and entertainment to science, history, and beyond. Our commitment to quality and innovation has earned us a loyal following and recognition within the podcasting industry.</p><p>Join us on this exciting journey as we continue to explore new stories, share insightful conversations, and connect with listeners like you. Thank you for being a part of the <b>Pod of Cast</b> family!</p>"
     },
-    {
-        "photo": "assets/img/avatar1.png",
-        "post": "Host 2",
-        "name": "Marques Keith",
-        "description": "Marques Keith is the driving force behind Pod of Cast's community building and content curation."
-    }
+    [
+        {
+            "photo": "assets/img/avatar2.png",
+            "post": "Host 1",
+            "name": "Porter Severus",
+            "description": "With a wealth of experience in production, Porter spearheads Pod of Cast's creative direction."
+        },
+        {
+            "photo": "assets/img/avatar1.png",
+            "post": "Host 2",
+            "name": "Marques Keith",
+            "description": "Marques Keith is the driving force behind Pod of Cast's community building and content curation."
+        }
+    ]
 ]
