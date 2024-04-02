@@ -1,16 +1,20 @@
 import Slider from "react-slick";
 import { useEffect, useState } from "react";
-import img from '../../public/assets/img/Google-Podcast.png'
-
+import { toast } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function SectionSponsorSlider(){
 
     const [sponsorList, setSponsorList] = useState([])
 
     async function getSponsorList(){
-        const resp = await fetch('data/sponsorSlider.json')
-        const json = await resp.json()
-        setSponsorList(json)
+        try {
+            const resp = await fetch('data/sponsorSlider.json')
+            const json = await resp.json()
+            setSponsorList(json)
+        } catch (error) {
+            toast.error('Try later', error)
+        }    
     }
 
     useEffect(()=>{
@@ -38,7 +42,8 @@ export default function SectionSponsorSlider(){
                         {sponsorList.map((item, index)=>(
                             <div className="sponsor-block" key={index}>
                                 <div className="sponsor-logo">
-                                    <img src={item.logo} alt={item.title} /></div>
+                                    <LazyLoadImage src={item.logo} alt={item.title}/>
+                                </div>
                                 <div className="sponsor-desc">{item.description}</div>
                             </div>
                         ))}

@@ -66,3 +66,32 @@
     }
 
 }
+.modal-content {
+    .contacts-form{
+        .btn-block{
+            width: 100%;
+        }
+        .form-button >div:last-child,
+        .form-button > div:first-child {
+            display: none;
+        }
+        .input-block{
+            margin-bottom: 12px;
+        }
+        .form-input{
+            padding: 10px;
+        }
+        .form-title{
+            margin-bottom: 10px;
+        }
+    }
+    .sponsor-sect{
+        padding: 10px 0;
+        .title-wrap,
+        .subtitle-text,
+        .price-details,
+        .price-block::after{
+            display: none;
+        }
+    }
+}

@@ -15,9 +15,11 @@ export default function HeroSection({ title, titleRed, text }){
 
     const [isOpen, setIsOpen] = useState(false)
     const [modalContent, setModalContent] = useState(null);
+    const [modalTitle, setModalTitle] = useState('')
 
-    const openModal = (content) => {
+    const openModal = (content, title='Get in touch') => {
         setModalContent(content);
+        setModalTitle(title)
         setIsOpen(true);
       };
 
@@ -37,11 +39,11 @@ export default function HeroSection({ title, titleRed, text }){
                 </div>}
             {location.pathname==='/about' && <HeroSectionStatistic />}
 
-            {location.pathname.startsWith('/episodes/') && <PodcastDetail />}
+            {location.pathname.startsWith('/episodes/') && <PodcastDetail onModal={()=> openModal(<SiteForm />, 'Please, contact us')}/>}
     </div>   
 </section>
 <Modal 
-    title='Get in Touch' 
+    title={modalTitle} 
     isOpen={isOpen} 
     onClose={()=>{setIsOpen(false)}} 
     children={modalContent}>

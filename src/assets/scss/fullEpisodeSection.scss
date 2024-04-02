@@ -28,6 +28,7 @@
         color: $davys-grey;
         background-color: transparent;
         border: none;
+        text-transform: capitalize;
         &:hover{
             color: $vermillion;
         }

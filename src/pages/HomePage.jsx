@@ -4,8 +4,8 @@ import SectionFeedback from "../components/SectionFeedback";
 import SectionMembership from "../components/SectionMembership";
 import SectionTalkListen from "../components/SectionTalkListen";
 import HeroSection from "../components/common/HeroSection";
-import SectionNews from "../components/SectionNews";
 import SectionDownload from "../components/SectionDownload";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export default function HomePage(){
     
@@ -16,13 +16,14 @@ export default function HomePage(){
             titleRed="Podcast"
             text="We cover all kinds of categories and a weekly special guest."
          />
-        <SectionTalkListen />
-        <SectionFeedback />
-        <SectionMembership />
-        <SectionEpisodes/>
-        <SectionSponsor />
-        {/* <SectionNews /> */}
-        <SectionDownload />
+         <LazyLoadComponent>
+            <SectionTalkListen />
+            <SectionFeedback />
+            <SectionMembership />
+            <SectionEpisodes/>
+            <SectionSponsor/>
+            <SectionDownload />
+         </LazyLoadComponent>
         </main>
     </>
     )

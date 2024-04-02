@@ -1,15 +1,21 @@
 import Slider from "react-slick";
 import { useState } from "react";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function SectionFeedback(){
 
     const [feedbackItem, setFeedbackItem] = useState([])
 
     async function getFeedback(){
-        const resp = await fetch('data/feedback.json')
-        const json = await resp.json()
-        setFeedbackItem(json[0])
+        try {
+            const resp = await fetch('data/feedback.json')
+            const json = await resp.json()
+            setFeedbackItem(json[0])
+        } catch (error){
+            toast.error('Try later', error)
+        }
     }
 
     useEffect(()=>{
@@ -39,7 +45,7 @@ export default function SectionFeedback(){
                             <blockquote className="quote-text">{item.text}</blockquote>
                             <div className="quote-author">
                                 <div className="photo">
-                                    <img src={item.photo} alt={item.name} />
+                                    <LazyLoadImage src={item.photo} alt={item.name} />
                                 </div>
                                 <div className="name">{item.name}</div>
                                 <div className="icon">

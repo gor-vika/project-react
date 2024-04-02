@@ -11,7 +11,7 @@ export default function SectionEpisodes(){
                 <h3 className="subtitle sub-text">Recent Episodes</h3>
             </div>
             <div className="subtitle-text">Available on your favorite platform</div>
-            <Episodes search='podcast' qty={6}/>
+            <Episodes search='podcast' qty='6'/>
             <Link to='episodes'>
                 <SiteBtn btnText='BROWSE ALL EPISODES' className='btn main-btn' classWrap='btn-block btn-section' />
             </Link>

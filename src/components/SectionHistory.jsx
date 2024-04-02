@@ -1,15 +1,21 @@
 import { useState, useEffect } from 'react'
 import microphone from '../assets/img/microphone-big.png'
 import FounderSocList from './FounderSocList'
+import { toast } from 'react-toastify'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function SectionHistory(){
 
     const [founderList, setFounderList] = useState([])
 
     async function getFounderList(){
-        const resp = await fetch ('data/history.json')
-        const json = await resp.json()
-        setFounderList(json)
+        try {
+            const resp = await fetch ('data/history.json')
+            const json = await resp.json()
+            setFounderList(json)
+        } catch (error) {
+            toast.error ('Try later', error)
+        }
     }
 
     useEffect(()=>{
@@ -24,27 +30,21 @@ export default function SectionHistory(){
                 </div>
                 <div className="subtitle-text">Their experience throughout every platform</div>
                 <div className="feedback-img-wrapper">
-                    <img src={microphone} alt="microphone" />
+                    <LazyLoadImage src={microphone} alt="microphone" />
                 </div>
                 <div className="title-wrap">
-                    <h4 className="about-subtitle feedback">About and History</h4>
+                    <h4 className="about-subtitle feedback">{founderList[0]?.title}</h4>
                 </div>
-                <div className="textcols">
-                    <p> Welcome to our podcast journey!</p>
-                    <p><b>Pod of Cast</b> is a platform dedicated to bringing you the best in podcasting entertainment. Our mission is simple: to create compelling content that resonates with our listeners and fosters a sense of community.</p>
-                    <p><b>Pod of Cast</b> was founded in [year] by a group of passionate individuals who shared a common love for podcasts. What started as a small passion project has grown into a thriving community of podcast enthusiasts from around the world.</p>
-                    <p>Over the years, we've produced a diverse range of podcasts covering topics ranging from pop culture and entertainment to science, history, and beyond. Our commitment to quality and innovation has earned us a loyal following and recognition within the podcasting industry.</p>
-                    <p>Join us on this exciting journey as we continue to explore new stories, share insightful conversations, and connect with listeners like you. Thank you for being a part of the <b>Pod of Cast</b> family!
-                    </p>
+                <div className="textcols" dangerouslySetInnerHTML={{__html: founderList[0]?.text}}>
                 </div>
                 <div className="title-wrap">
                     <h4 className="about-subtitle founder">Founder and Main Host</h4>
                 </div>
                 <div className="flex founder-wrap">
-                    {founderList.map((item, index)=>(
+                    {founderList[1]?.map((item, index)=>(
                         <div className={`flex founder-block ${index === 0 ? 'first-founder' : 'second-founder'}`}  key={index}>
                             <div className="founder-img">
-                                <img src={item.photo} alt={item.name} />
+                                <LazyLoadImage src={item.photo} alt={item.name}/>
                             </div>
                             <div className="founder-text">
                                 <span>{item.post}</span>

@@ -7,14 +7,11 @@ import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import React from "react"
 import { Link } from "react-router-dom"
 import { RotatingLines } from "react-loader-spinner"
-import Modal from "./common/Modal.jsx"
-import SectionSponsor from "./SectionSponsor"
-import SiteForm from "./common/SiteForm"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 
 
-export default function PodcastDetail(){
+export default function PodcastDetail(props){
 
-    const [isOpen, setIsOpen] = useState(false)
     const params = useParams()
     
     const [detailEpisode, setDetailEpisode] = useState(null)
@@ -71,7 +68,7 @@ export default function PodcastDetail(){
         <div className="flex podcast-detail">
             {detailEpisode && (<>
         <div className="img-wrapper">
-            <img src={detailEpisode.images[0].url} alt={detailEpisode.name} />
+            <LazyLoadImage src={detailEpisode.images[0].url} alt={detailEpisode.name} />
         </div>
         <div className="podcast-content">
             <h5 className="podcast-title">{detailEpisode.name}</h5>
@@ -81,7 +78,7 @@ export default function PodcastDetail(){
                 <div className="episode-tag episode-duration">{millisecondsToTime(detailEpisode.duration_ms)}</div>
             </div>
             <div className="flex podcast-btn">
-                <SiteBtn btnText='Subscribe' className='btn main-btn' classWrap='btn-block btn-section' onClick={()=>{setIsOpen(true)}}/>
+                <SiteBtn btnText='Subscribe' className='btn main-btn' classWrap='btn-block btn-section' onClick={props.onModal}/>
                 <div className="btn-block btn-section">
                     <button className="btn main-btn btn-transparent" onClick={togglePlay}>
                     {isPlaying ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} /> }
@@ -95,12 +92,6 @@ export default function PodcastDetail(){
      )}    
 </div>
 <Link to='/episodes'>All Episodes</Link>
-<Modal 
-    title='Please, contact us' 
-    isOpen={isOpen} 
-    onClose={()=>{setIsOpen(false)}} 
-    children={<SiteForm />}>
-</Modal>
 </>
 
     )

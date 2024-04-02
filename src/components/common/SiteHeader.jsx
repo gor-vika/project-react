@@ -23,7 +23,6 @@ export default function SiteHeader(){
                     <li><NavLink to='/'>Main</NavLink></li>
                     <li><NavLink to='about'>About</NavLink></li>
                     <li><NavLink to='episodes'>Episodes</NavLink></li>
-                    {/* <li><NavLink to='news'>News</NavLink></li> */}
                 </ul>
             </nav>
             <div className="btn-wrapper">

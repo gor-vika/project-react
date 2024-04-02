@@ -1,4 +1,5 @@
 import { useEffect, useId, useState } from "react"
+import InputMask from 'react-input-mask';
 
 export default function FormElement(props){
 
@@ -55,6 +56,14 @@ export default function FormElement(props){
                 onFocus={(e)=>focusHandler(e.target)}
                 ></textarea> 
             ) : 
+                props.mask 
+                    ? (
+                        <InputMask className={`form-input ${!error.isValid ? 'has-error' : ''}`} mask={props.mask} type={props.type} name={props.name} id={elId} placeholder={props.placeholder} value={props.value} 
+                        onChange={(e)=>changeHandler(e.target)} 
+                        onBlur={(e)=>blurHandler(e.target)}
+                        onFocus={(e)=>focusHandler(e.target)}/>
+                    )
+             : 
             (<input className={`form-input ${!error.isValid ? 'has-error' : ''}`} type={props.type} name={props.name} id={elId} placeholder={props.placeholder} value={props.value} 
             onChange={(e)=>changeHandler(e.target)} 
             onBlur={(e)=>blurHandler(e.target)}

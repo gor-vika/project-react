@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import SiteBtn from '../components/common/SiteBtn.jsx'
 import Modal from "./common/Modal.jsx"
 import SectionSponsor from "./SectionSponsor.jsx"
+import { toast } from "react-toastify"
 
 export default function SectionMembership(){
 
@@ -10,9 +11,13 @@ export default function SectionMembership(){
     const [benefitList, setBenefitList] = useState([])
 
     async function getBenefitList(){
-        const resp = await fetch('data/membership.json')
-        const json = await resp.json()
-        setBenefitList(json)
+        try {
+            const resp = await fetch('data/membership.json')
+            const json = await resp.json()
+            setBenefitList(json)
+        } catch {
+            toast.error('Try later', error)
+        } 
     }
 
     useEffect(()=>{

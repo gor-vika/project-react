@@ -3,18 +3,26 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import HeroSliderPlatforms from "./common/HeroSliderPlatforms";
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 
 export default function MainSlider(){
     
     const [slide, setSlide] = useState([])
 
+    async function fetchData(){
+        try {
+            const resp = await fetch('data/heroSlider.json')
+            const json = await resp.json()
+            setSlide(json)
+        } catch (error) {
+            toast.error('Error fetching slides:', error)
+        }
+    }
+
     useEffect(()=>{
-        fetch('data/heroSlider.json')
-        .then(response => response.json())
-        .then(data => setSlide(data))
-        .catch(error => console.error('Error loading slides:', error));
-}, []);
+        fetchData()
+    }, [])
 
     const settings = {
         className: "center",

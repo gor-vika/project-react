@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import podcast from '../assets/img/podcast.png'
 import { millisecondsToTime } from '../helpers'
 import React from 'react'
@@ -11,9 +12,11 @@ export default function PodcastItem(props){
         <div className="episode-item">
             <div className="flex">
                 <div className="img-wrapper">
-                    <img src={item.images[1].url} alt={item.name} onError={(e)=>{
-                        e.target.src={podcast}
-                    }}/>
+                    <LazyLoadImage 
+                        src={item.images[1].url} alt={item.name} onError={(e)=>{
+                            e.target.src={podcast}
+                        }}
+                    />
                 </div>
                 <div className="text-content flex">
                 {item.audio_preview_url ? (

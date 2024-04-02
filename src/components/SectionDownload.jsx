@@ -1,3 +1,4 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import googlePodcast from '../assets/img/google-podcasts.svg'
 import spotify from '../assets/img/spotify.svg'
 import youtube from '../assets/img/youtube.svg'
@@ -16,9 +17,21 @@ export default function SectionDownload(){
                 </Link>                   
                 <div className="download-text">Content also available on:</div>
                 <ul className="download-social-list">
-                    <li><a href="https://podcasts.google.com/"><img src={googlePodcast} target="_blank" rel="noreferrer, nofollow" alt="google podcasts logo" /></a></li>
-                    <li><a href="https://www.spotify.com/"><img src={spotify} target="_blank" rel="noreferrer, nofollow" alt="spotify logo" /></a></li>
-                    <li><a href="https://www.youtube.com/"><img src={youtube} target="_blank" rel="noreferrer, nofollow" alt="youtube logo" /></a></li>
+                    <li>
+                        <Link to='https://podcasts.google.com/' target="_blank" rel="noreferrer, nofollow">
+                            <LazyLoadImage src={googlePodcast} alt="google podcasts logo"/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to='https://www.spotify.com/' target="_blank" rel="noreferrer, nofollow">
+                            <LazyLoadImage src={spotify} alt="spotify logo"/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to='https://www.youtube.com/' target="_blank" rel="noreferrer, nofollow">
+                            <LazyLoadImage src={youtube} alt="youtube logo"/>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </section>

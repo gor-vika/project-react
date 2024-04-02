@@ -1,13 +1,19 @@
 import { useState, useEffect } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { toast } from 'react-toastify'
 
 export default function SectionTalkListen(){
 
     const [feedback, setFeedback] = useState([])
 
     async function getFeedbackMain(){
-        const resp = await fetch('data/feedback.json')
-        const json = await resp.json()
-        setFeedback(json[1])
+        try {
+            const resp = await fetch('data/feedback.json')
+            const json = await resp.json()
+            setFeedback(json[1])
+        } catch (error) {
+            toast.error('Try later', error)
+        }   
     }
 
     useEffect(()=>{
@@ -42,7 +48,7 @@ export default function SectionTalkListen(){
                             <blockquote className="quote-text">{item.text}</blockquote>
                             <div className="quote-author">
                                 <div className="photo">
-                                    <img src={item.photo} alt={item.name} />
+                                    <LazyLoadImage src={item.photo} alt={item.name}/>
                                 </div>
                                 <div className="name">{item.name}</div>
                                 <div className="icon">

@@ -2,6 +2,7 @@ import { useState } from "react"
 import FormElement from "../FormElement"
 import { toast } from 'react-toastify';
 
+
 export default function SiteForm(){
 
     const [values, setValues] = useState({
@@ -38,38 +39,37 @@ export default function SiteForm(){
         setValues({...values, [target.name]: target.value})
     }
 
-    const submitHandler = (e) => {
-        e.preventDefault()
-        let isValid = true
-
+    const submitHandler = async (e) => {
+        e.preventDefault();
+        let isValid = true;
+    
         const fieldsToCheck = ['name', 'phone', 'email', 'subject', 'message'];
-        const errors = {}
+        const errors = {};
         fieldsToCheck.forEach(field => {
-            if(values[field] === ''){
-                errors[field] = {isValid: false, message: `Enter your ${field}, please`}
-                isValid = false
+            if (values[field] === '') {
+                errors[field] = { isValid: false, message: `Enter your ${field}, please` };
+                isValid = false;
             } else {
-                errors[field] = {isValid: true, message: ``}
+                errors[field] = { isValid: true, message: '' };
             }
-
-    });
-        setError(errors)
-
-        if(isValid){
-        const message = `<b>Name: </b>${values.name}\r\n
-            <b>Phone: </b>${values.phone}\r\n
-            <b>Email: </b>${values.email}\r\n
-            <b>Subject: </b>${values.subject}\r\n
-            <b>Message: </b>${values.message}
-            `
-        var url = `https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage?chat_id=${import.meta.env.VITE_CHAT_ID}&text=${encodeURI(message)}&parse_mode=HTML`;
-
-        fetch(url, {
-            method: 'post'
-        })
-            .then(resp => resp.json())
-            .then(resp => {
-                if (resp.ok){
+        });
+        setError(errors);
+    
+        if (isValid) {
+            const message = `<b>Name: </b>${values.name}\r\n
+                <b>Phone: </b>${values.phone}\r\n
+                <b>Email: </b>${values.email}\r\n
+                <b>Subject: </b>${values.subject}\r\n
+                <b>Message: </b>${values.message}
+            `;
+            const url = `https://api.telegram.org/bot${import.meta.env.VITE_BOT_TOKEN}/sendMessage?chat_id=${import.meta.env.VITE_CHAT_ID}&text=${encodeURI(message)}&parse_mode=HTML`;
+    
+            try {
+                const resp = await fetch(url, {
+                    method: 'post'
+                });
+                const data = await resp.json();
+                if (data.ok) {
                     setValues({
                         name: '',
                         phone: '',
@@ -77,18 +77,18 @@ export default function SiteForm(){
                         subject: '',
                         message: ''
                     });
-                    toast.success('Your message succefulle sent')
+                    toast.success('Your message was successfully sent');
                 } else {
-                    toast.error('Some error occured')
+                    toast.error('Some error occurred');
                 }
-            })
-
-        } 
-        else {
-            toast.error('Please fill in all fields')
+            } catch (error) {
+                console.error('Error:', error);
+                toast.error('An error occurred while sending your message');
+            }
+        } else {
+            toast.error('Please fill in all fields');
         }
-
-    }
+    };
 
     return (
         <form onSubmit={submitHandler} method="post" className="contacts-form container">
@@ -104,6 +104,7 @@ export default function SiteForm(){
                         changeHandler={changeHandler}
                         required={true}
                     />
+                    
                     <FormElement 
                         type="tel"
                         label="Phone"
@@ -113,6 +114,7 @@ export default function SiteForm(){
                         error={error.phone}
                         changeHandler={changeHandler}
                         required={true}
+                        mask="+38 (099) 999-99-99"
                     />
                 </div>
                 <div className="form-column">

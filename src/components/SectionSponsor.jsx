@@ -3,6 +3,7 @@ import SiteBtn from '../components/common/SiteBtn.jsx'
 import React from "react"
 import Modal from "./common/Modal.jsx"
 import SiteForm from '../components/common/SiteForm.jsx'
+import { toast } from "react-toastify"
 
 export default function SectionSponsor(){
 
@@ -12,9 +13,13 @@ export default function SectionSponsor(){
     const [priceList, setPriceList] = useState([])
 
     async function getPriceList(){
-        const resp = await fetch('data/price.json')
-        const json = await resp.json()
-        setPriceList(json)
+        try {
+            const resp = await fetch('data/price.json')
+            const json = await resp.json()
+            setPriceList(json)
+        } catch {
+            toast.error ('Try later', error)
+        } 
     }
 
     useEffect(()=>{
@@ -22,13 +27,13 @@ export default function SectionSponsor(){
     }, [])
 
     return(<>
-        <section className="section white sponsor-sect">
+        <section className="section white sponsor-sect" id='pricing'>
             <div className="container">
                 <div className="title-wrap">
                     <h3 className="subtitle sub-text sponsor">Become our sponsor</h3>
                 </div>
                 <div className="subtitle-text">Get exclusive episodes, merch and more</div>
-                <div className="price-block">
+                <div className="price-block" id='pricing-section'>
                     {priceList.map((item, index)=> (
                         <div className="price-item-wrap" key={index}>
                             <div className="price-item">
