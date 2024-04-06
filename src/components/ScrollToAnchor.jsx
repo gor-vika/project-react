@@ -8,18 +8,18 @@ export default function ScrollToAnchor() {
   useEffect(() => {
     if(location.hash){
       lastHash.current = location.hash.split('#').pop(); // safe hash for further use after navigation
-      if (lastHash.current && document.getElementById(lastHash.current)) {
         setTimeout(() => {
+      if (lastHash.current && document.getElementById(lastHash.current)) {
           document
             .getElementById(lastHash.current)
             ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           lastHash.current = '';
-        }, 100);
-      
+        } 
+        }, 100);      
+      } else {
+        window.scrollTo(0, 0);
       }
-    } else {
-      window.scrollTo(0, 0);
-    }
+    
   }, [location]);
 
   return null;

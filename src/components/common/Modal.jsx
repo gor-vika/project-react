@@ -6,7 +6,7 @@ export default function Modal({isOpen, title, children, onClose}){
                 <div className="modal-header">
                     <div className="modal-title">{title}</div>
                     <div className="modal-close">
-                        <button type="button" onClick={()=>{onClose()}}>&#9747;</button>
+                        <button type="button" onClick={()=>{onClose()}}>&times;</button>
                     </div>
                 </div>
                 <div className="modal-body">

@@ -5,12 +5,19 @@ import React from 'react';
 import Modal from './Modal';
 import { useState } from 'react';
 import SiteForm from './SiteForm';
+import HamburgerButton from '../HamburgerButton';
+import HamburgerMenu from '../HamburgerMenu';
+
 
 export default function SiteHeader(){
     
     const [isOpen, setIsOpen] = useState(false)
+    const [mobileMenu, setMobileMenu] = useState(false)
+    const toggleMenu = () => {
+        setMobileMenu(!mobileMenu);
+      };
 
-    return (
+    return (<>
     <header className="header">
         <div className="container flex">
             <div className="logo">
@@ -25,6 +32,8 @@ export default function SiteHeader(){
                     <li><NavLink to='episodes'>Episodes</NavLink></li>
                 </ul>
             </nav>
+        <HamburgerButton mobileMenu={mobileMenu} toggleMenu={toggleMenu} />
+
             <div className="btn-wrapper">
                 <div>
                     <Link to='episodes'>
@@ -32,11 +41,18 @@ export default function SiteHeader(){
                     </Link>
                 </div>
                 <div><SiteBtn btnText='subscribe' className='btn' onClick={()=>{setIsOpen(true)}} /></div>
+                
             </div>
         </div>
+
         <Modal title='Please, contact us' isOpen={isOpen} onClose={()=>{setIsOpen(false)}} children={<SiteForm />}>
 
         </Modal>
+        
+       
     </header>
+     
+    <HamburgerMenu mobileMenu={mobileMenu} toggleMenu={toggleMenu} />
+ </>
     )
 }

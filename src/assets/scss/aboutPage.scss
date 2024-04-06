@@ -13,12 +13,27 @@
 .statistic{
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(373px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     position: relative;
     bottom: 0;
     left: 0;
     transform: translateY(50%);
     margin-top: -105px;
+    @media screen and (max-width: 1024px){           
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+    @media screen and (max-width: 860px){           
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        transform: translateY(10%);
+    }
+    @media screen and (max-width: 700px){           
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    }
+    @media screen and (max-width: 540px){           
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+        transform: translateY(25%);
+        padding-bottom: 180px;
+    }
     &::after{
         content: '';
         position: absolute;
@@ -27,7 +42,10 @@
         background-image: url(../img/vector4.svg);
         top: 0;
         right: 0;
-        transform: translate(110%, 50%);
+        transform: translate(10%, 50%);
+        @media screen and (max-width: 768px){           
+            display: none;
+        }
     }
     &-block{
         border: 1.50px solid $black;
@@ -37,6 +55,13 @@
         padding: 59px 94px;
         text-align: center;
         color: $davys-grey;
+        z-index: 20;
+        @media screen and (max-width: 1024px){           
+            padding: 30px;
+        }
+        @media screen and (max-width: 768px){           
+            padding: 20px;
+        }
         .statistic-title{
             font-family: 'Montserrat Alternates Bold', sans-serif;
             font-size: 3.69rem;
@@ -46,6 +71,9 @@
             margin-bottom: 20px;
             & > span{
                 color: $black;
+            }
+            @media screen and (max-width: 540px){           
+                font-size: 2rem;
             }
         }
     }

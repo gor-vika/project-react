@@ -4,8 +4,12 @@
     border-radius: 0.75rem;
     padding: 40px 50px 30px;
     width: min(95%, 570px);
-    min-height: 245px;
+    height: 245px;
+    overflow: scroll;
     text-align: center;
+    @media screen and (max-width: 540px){           
+        padding: 15px;     
+    }
     .sponsor-logo{     
         display: flex;
         justify-content: center;

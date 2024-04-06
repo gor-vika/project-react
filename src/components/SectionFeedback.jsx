@@ -31,9 +31,25 @@ export default function SectionFeedback(){
         speed: 500,
         slidesToShow: 2,
         slidesToScroll: 1,
+        adaptiveHeight: true,
+        // variableHeight: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1
+                } 
+            }
+          ]
       };
     return (
-        <section className="section blue">
+        <section className="section blue" id="feedback-link">
             <div className="container">
                 <div className="title-wrap">
                     <h3 className="subtitle sub-text feedback">What our listeners say</h3>

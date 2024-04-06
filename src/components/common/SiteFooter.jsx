@@ -48,14 +48,14 @@ export default function SiteFooter(){
             <div className="footer-menu-block">
                 <ul>
                     <li><Link to='about'>About</Link></li>
-                    <li><Link to=''>Testimonials</Link></li> 
-                    <li><Link to=''>Features</Link></li>
+                    <li><Link to='/#feedback-link'>Testimonials</Link></li> 
+                    <li><Link to='/#membership-link'>Features</Link></li>
                 </ul>
             </div>
             <div className="footer-menu-block">
                 <ul>
                     <li><Link to='episodes'>Episodes</Link></li>
-                    <li><Link to="#pricing">Pricing</Link></li> {/*не працює перенаправлення до секції? */}
+                    <li><Link to="/#pricing">Pricing</Link></li> {/*не працює перенаправлення до секції? */}
                 </ul>
             </div>
             <div className="footer-platforms-block">

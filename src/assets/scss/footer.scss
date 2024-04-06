@@ -1,17 +1,35 @@
 .footer{
     padding: 140px 0 80px;
     border-top: 1.5px solid $davys-grey;
+    @media screen and (max-width: 1024px){           
+        padding: 80px 0;
+    }
     .flex{
         align-items: flex-start;
         margin-bottom: 137px;
+        flex-wrap: wrap;
+        @media screen and (max-width: 768px){           
+            margin-bottom: 60px;
+         }
     }
     .platforms{
         padding: 0;
         border: none;
+        &.flex{
+            @media screen and (max-width: 768px){           
+                flex-direction: row;
+             }
+        }
     }
 }
 .copyright-block{
     width: 23.6%;
+    @media screen and (max-width: 768px){           
+        width: 30%;
+    }
+    @media screen and (max-width: 540px){           
+        display: none;
+     }
     .logo, 
     .copyright{
         display: inline-block;
@@ -25,35 +43,47 @@
         font-size: 0.88rem;
         color: $davys-grey;
         margin-bottom: 40px;
+        @media screen and (max-width: 768px){           
+            display: none;
+         }
     }
 }
-.footer-social-list >li{
-    display: inline-block;
-    &:hover{
-        filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
-    }
-    &:not(:last-child){
-        margin-right: 25px;
-    }
-    & a > svg{
-    width: 24px;
-    height: 24px;
-    }
-}
-.footer-menu-block > ul {
-    li a{
-        text-decoration: none;
-        color: $davys-grey;
-    }
-    &>li:hover a{
-        color: $vermillion;
-    }
-    &>li:not(:last-child){
-        margin-bottom: 20px;
+.footer-social-list {
+        >li{
+        display: inline-block;
+        &:hover{
+            filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
+        }
+        &:not(:last-child){
+            margin-right: 25px;
+        }
+        & a > svg{
+        width: 24px;
+        height: 24px;
+        }
     }
 }
+.footer-menu-block {
+    > ul {
+        li a{
+            text-decoration: none;
+            color: $davys-grey;
+        }
+        &>li:hover a{
+            color: $vermillion;
+        }
+        &>li:not(:last-child){
+            margin-bottom: 20px;
+        }
+    
+    }
+}
+
 .footer-platforms-block{
     width: 32%;
+    @media screen and (max-width: 768px){           
+       width: 100%;
+    }
 }
 .footer-platforms-list{
     color: $davys-grey;
@@ -62,6 +92,9 @@
 .footer-platforms-block .flex{
     gap: 38px;
     margin-bottom: 60px;
+    @media screen and (max-width: 768px){           
+       flex-wrap: nowrap;
+     }
     &>li:hover{
         scale: 1.1;
     }
@@ -74,6 +107,7 @@
     &:hover{
         scale: 1.1;
     }
+    
 }
 .all-rights-reserved{
     padding-top: 20px;

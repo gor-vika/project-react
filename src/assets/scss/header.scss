@@ -27,6 +27,11 @@
     .btn-wrapper{
         display: flex;
         gap: 20px;
+        .btn-transparent{
+            @media screen and (max-width: 1024px){           
+                display: none;
+            }
+        }
     }
 
 }

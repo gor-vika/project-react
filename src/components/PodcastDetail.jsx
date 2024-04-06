@@ -91,7 +91,7 @@ export default function PodcastDetail(props){
     </>
      )}    
 </div>
-<Link to='/episodes'>All Episodes</Link>
+<Link to='/episodes' className="back-link">&larr; Back</Link>
 </>
 
     )

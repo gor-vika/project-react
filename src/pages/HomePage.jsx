@@ -21,7 +21,7 @@ export default function HomePage(){
             <SectionFeedback />
             <SectionMembership />
             <SectionEpisodes/>
-            <SectionSponsor/>
+            <div id="pricing"><SectionSponsor/></div>
             <SectionDownload />
          </LazyLoadComponent>
         </main>

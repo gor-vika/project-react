@@ -7,7 +7,9 @@
     height: 120px;
     background-image: url(../img/vector4.svg);
     background-repeat: no-repeat;
-
+    @media screen and (max-width: 540px){           
+        display: none; 
+     }
 }
 .form::after{
     content: '';
@@ -40,11 +42,19 @@
     border-top: 0.5px solid $davys-grey;
     padding-top: 40px;
     &.container{
-        width: min(90%, 766px);
+        width: min(90%, 766px);       
+    }
+    .flex{
+        @media screen and (max-width: 540px){           
+            flex-direction: column;   
+         }
     }
     
     .form-column{
         width: calc(373/766 * 100%);
+        @media screen and (max-width: 540px){           
+            width: 100%;    
+         }
     }
     .input-block{
         margin-bottom: 22px;
@@ -93,6 +103,10 @@
     .form-button > div{
         width: 33%;
         font-size: 0.88rem;
+        @media screen and (max-width: 540px){           
+            width: 100%;
+            margin-bottom: 15px;
+         }
         &:last-child{
             padding-left: 70px;
         }
@@ -105,5 +119,8 @@
         color: red;
         font-size: 0.8rem;
         padding-left: 21px;
+    }
+    textarea{
+        resize: none;
     }
 }

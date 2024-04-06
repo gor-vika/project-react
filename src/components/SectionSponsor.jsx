@@ -27,7 +27,7 @@ export default function SectionSponsor(){
     }, [])
 
     return(<>
-        <section className="section white sponsor-sect" id='pricing'>
+        <section className="section white sponsor-sect">
             <div className="container">
                 <div className="title-wrap">
                     <h3 className="subtitle sub-text sponsor">Become our sponsor</h3>

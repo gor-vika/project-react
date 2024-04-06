@@ -4,6 +4,9 @@
     padding: 160px 0 140px;
     position: relative;
     z-index: 4;
+    @media screen and (max-width: 540px){           
+        padding: 160px 0 60px;      
+     }
     &::before{
         content: '';
         background-image: url(../img/hero-img-1.svg);
@@ -12,7 +15,15 @@
         width: 330px;
         position: absolute;
         left: 0;
-        top: 70px;
+        top: 70px;z-index: -1;
+        @media screen and (max-width: 1024px){           
+            height: 300px;
+            width: 200px;
+            background-size: contain;         
+        }
+        @media screen and (max-width: 540px){           
+           display: none;       
+        }
     }
     &::after{
         content: '';
@@ -23,6 +34,15 @@
         position: absolute;
         right: 60px;
         top: 235px;
+        z-index: -1;
+        @media screen and (max-width: 1024px){           
+            height: 100px;
+            width: 80px;
+            background-size: contain;
+        }
+        @media screen and (max-width: 540px){           
+            display: none;       
+         }
     }
     .title{
         font-family: 'Montserrat Alternates Bold', sans-serif;
@@ -35,12 +55,18 @@
             color: $vermillion;
             display: block;
         }
+        @media screen and (max-width: 768px){           
+            font-size: 4rem;        
+        }
     }
     .title-desc{
         padding: 0 35%;
         text-align: center;
         color: $davys-grey;
         margin: 0 auto 60px;
+        @media screen and (max-width: 768px){           
+            padding: 0 10%;       
+        }
     } 
 }
 .platforms{
@@ -64,12 +90,21 @@
     .main-btn{
         padding: 24px 48px;
         box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.25);
+        @media screen and (max-width: 768px){           
+            padding: 18px 30px;      
+        }
+    }
+    @media screen and (max-width: 540px){           
+        margin-bottom: 30px;      
     }
 }
 
 
 .hero-slider{
     margin-bottom: 120px;
+    @media screen and (max-width: 540px){           
+        margin-bottom: 30px;      
+    }
     .my-slick-slide{
         width: min(90%, 373px);
         aspect-ratio: 1;
@@ -85,10 +120,14 @@
         position: absolute;
         left: 20px;
         bottom: 20px;
+        @media screen and (max-width: 1024px){           
+            font-size: 1.5rem;     
+        }
     }
     .hero-slide-platforms{
         display: flex;
         justify-content: end;
+        flex-wrap: wrap;
         gap: 10px;
         position: absolute;
         top: 20px;
@@ -102,22 +141,41 @@
         }
     }
 }
+.platforms.flex{
+    @media screen and (max-width: 768px){           
+        flex-direction: column;    
+        >li {
+            margin-bottom: 15px;
+        }  
+    }  
+}
 .podcast-detail{
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    @media screen and (max-width: 768px){           
+        flex-direction: column;    
+    }  
     .img-wrapper{
         width: 40%;
         border-radius: 0.5rem;
-        box-shadow: 12px 12px 0 0 #81adc8;
+        box-shadow: 12px 12px 0 0 #81adc8; 
         img{
             width: 100%;
             aspect-ratio: 1;
             border-radius: inherit;
         }
+        @media screen and (max-width: 768px){           
+            width: 100%;   
+            margin-bottom: 45px; 
+        } 
+        
     }
     .podcast-content{
-        width: 50%;
+        width: 56%;
+        @media screen and (max-width: 768px){           
+            width: 100%;    
+        } 
         .podcast-title{
             font-family: 'Montserrat Alternates Bold', sans-serif;
             font-size: 2.31rem;
@@ -125,22 +183,42 @@
             margin-bottom: 23px;
         }
         .podcast-desc{
-            padding-top: 20px;
+            padding: 20px;
             color: $davys-grey;
             border-top: 1px solid $black;
             margin-bottom: 40px;
             height: 270px;
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: auto;
+            word-wrap: break-word;
+            @media screen and (max-width: 768px){           
+            height: max-content;  
+        } 
+            
         }
         .podcast-tags{
             margin-bottom: 60px;
         }
         .podcast-btn{
             justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 15px;
             button span{
                 padding-left: 20px;
             }
         }
     }
-
+    ::-webkit-scrollbar{
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: $champagne;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba($vermillion, 0.5);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: $vermillion;
+      }
 }

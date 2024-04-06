@@ -25,7 +25,7 @@ export default function SectionMembership(){
     }, [])
 
     return (<>
-        <section className="section white">
+        <section className="section white" id="membership-link">
             <div className="container">
                 <div className="title-wrap">
                     <h3 className="subtitle sub-text">Membership benefits</h3>

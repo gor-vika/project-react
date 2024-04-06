@@ -1,6 +1,11 @@
 .section.blue{
     background-color: $alice-blue;
 }
+.section#feedback-link{
+    @media screen and (max-width: 540px){           
+        padding-bottom: 160px;   
+    }
+}
 
 .subtitle.sub-text{
     margin-bottom: 20px;
@@ -23,10 +28,10 @@
     color: $davys-grey;
     margin-bottom: 100px;
 }
-.slick-slider .slick-list .slick-track .slick-slide {
-    height: 100%; 
+// .slick-slider .slick-list .slick-track .slick-slide {
+//     height: 100%; 
     
-}
+// }
 
 .slick-slider .slick-prev,
 .slick-slider .slick-next{
@@ -36,6 +41,9 @@
     height: 48px;
     border: 2.5px solid $black;
     border-radius: 50%;
+    @media screen and (max-width: 540px){           
+        top: calc(100% + 40px);     
+    }
     &::before{
         content: '';
         display: block;
@@ -59,31 +67,52 @@
     &::before{
         rotate: 135deg;
     }
+    @media screen and (max-width: 540px){           
+        left: 75px;    
+    }  
+}
+.slick-slider .slick-prev{
+    @media screen and (max-width: 540px){           
+        left: 15px;    
+    }  
 }
 .slick-slide{
     padding: 0 10px;  
+    height: auto!important;
+}
+.slick-track
+{
+    display: flex !important;
+}
+.slick-slider .slick-list{
+    height: auto!important;
 }
 .quote.feedback-slider{
     background-color: transparent;
     width: 100%;
     padding: 0;
     position: relative;  
+    
     .feedback-item{   
         width: min(95%, 570px);  
         padding: 132px 40px 40px;
-        // margin-right: 20px;
         background-color: #fff;
         border-radius: 0.5rem;
         position: relative;
-        min-height: 455px; 
-        overflow: hidden;
         display: inline-flex !important;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
+        @media screen and (max-width: 540px){           
+            padding: 40px 40px 40px;    
+         }
         .quote-text{
             font-size: 1.44rem;
             text-align: left;
             font-family: 'Montserrat Alternates', sans-serif;
+            @media screen and (max-width: 1024px){           
+                font-size: 1rem;        
+            }
             &::before{
                 top: -92px;
                 left: 0;
@@ -95,3 +124,4 @@
         }
     }
 }
+

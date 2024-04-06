@@ -18,10 +18,12 @@
 }
 .full-episode-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
     padding-bottom: 20px;
     border-bottom: 1.5px solid $davys-grey;
     margin-bottom: 110px;
+    flex-wrap: wrap;
     .btn-episode{
         font-size: 1.44rem;
         padding: 8px 16px;
@@ -29,6 +31,7 @@
         background-color: transparent;
         border: none;
         text-transform: capitalize;
+        cursor: pointer;
         &:hover{
             color: $vermillion;
         }
@@ -37,4 +40,11 @@
         }
     }
     
+}
+.back-link{
+    text-decoration: none;
+    color: $davys-grey;
+    &:hover{
+        color: $vermillion;
+    }
 }

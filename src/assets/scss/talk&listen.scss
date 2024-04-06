@@ -1,6 +1,9 @@
 .section{
     padding: 140px 0;
     position: relative;
+    @media screen and (max-width: 540px){           
+        padding: 80px 0;       
+    }
     &.white{
         background-color: #fff;
     }
@@ -22,11 +25,28 @@
         letter-spacing: -0.02em;
         text-align: center;
         margin-bottom: 100px;
+        @media screen and (max-width: 1024px){           
+            font-size: 3rem;        
+        }
+        @media screen and (max-width: 540px){           
+            font-size: 2rem; 
+            margin-bottom: 30px;     
+        }
+    }
+    .flex{
+        @media screen and (max-width: 540px){           
+            flex-wrap: wrap; 
+        }
     }
     .talk-listen-block{
         width: 40.7%;
         text-align: center;
         margin-bottom: 120px;
+        @media screen and (max-width: 540px){           
+            width: 90%;  
+            margin-bottom: 30px; 
+            display: block; 
+        }
         svg{
             width: 275px;
             aspect-ratio: 1;
@@ -45,6 +65,10 @@
         text-align: center;
         margin-bottom: 40px;
         position: relative;
+        @media screen and (max-width: 540px){           
+            font-size: 1.5rem; 
+            margin-bottom: 20px;     
+        }
         &::before{
             content: '“';
             position: absolute;
@@ -66,6 +90,7 @@
         gap: 15px;
         font-size: 0.88rem;
         line-height: 1.6;
+        flex-wrap: wrap;
         .photo img{
             border-radius: 6.19rem;
         }
@@ -106,6 +131,11 @@
         top: 0;
         transform: translate(30%, -28%);
         z-index: 2;
+        @media screen and (max-width: 1000px){           
+            right: 50px;    
+         }
+        @media screen and (max-width: 540px){           
+            display: none;     
+         }
     }
-
 }

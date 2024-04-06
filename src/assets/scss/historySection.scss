@@ -1,15 +1,6 @@
 .feedback-img-wrapper{
     position: relative;
     margin-bottom: 60px;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 25%;
-        left: 10%;
-        // background-image: url(../img/vector-3.svg);
-        width: 425px;
-        height: 333px;
-    }
     img{
         border-radius: 0.5rem;
     }
@@ -51,6 +42,9 @@
         background-image: url(../img/scribble.svg);
         background-repeat: no-repeat;
         background-size: cover;
+        @media screen and (max-width: 540px){           
+            display: none;   
+         }
     }
 }
 .textcols {
@@ -64,9 +58,19 @@
     & p:not(:last-child){
         margin-bottom: 15px;
     }
+    @media screen and (max-width: 600px){           
+        column-count: 1;  
+     }
+
 }
 .founder-wrap{
     align-items: stretch;
+    &.flex{
+        gap: 20px;
+        @media screen and (max-width: 1024px){           
+            flex-direction: column;
+        }
+    }
 }
 .founder-block{
     width: 49%;
@@ -75,6 +79,9 @@
     box-shadow: 10px 10px 0 0 $black;
     padding: 16px;
     position: relative;
+    @media screen and (max-width: 1024px){           
+        width: 98%;
+    }
 }
 .first-founder::after, 
 .second-founder::after
@@ -91,11 +98,14 @@
     background-image: url(../img/face-1.svg);
 }
 .second-founder::after{
-    background-image: url(../img/star.svg);
+    background-image: url(../img/star.svg);  
 }
 .founder-text{
     width: 47%;
     padding: 250px 0 20px;
+    @media screen and (max-width: 540px){           
+        padding: 100px 0 20px; 
+     }
     span{
         font-size: 0.88rem;
         margin-bottom: 6px;
@@ -106,6 +116,9 @@
         line-height: 1;
         letter-spacing: -0.02em;
         margin-bottom: 20px;
+        @media screen and (max-width: 540px){           
+            font-size: 1.5rem;
+        }
     }
     .founder-desc{
         font-size: 0.88rem;
