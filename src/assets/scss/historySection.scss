@@ -48,9 +48,12 @@
     }
 }
 .textcols {
-	column-width: 49%;
-	column-count: 2;
-	column-gap: 2%;
+	-moz-column-width: 49%;
+	     column-width: 49%;
+	-moz-column-count: 2;
+	     column-count: 2;
+	-moz-column-gap: 2%;
+	     column-gap: 2%;
     color: $davys-grey;
     padding-bottom: 81px;
     border-bottom: 0.5px solid $davys-grey;
@@ -59,7 +62,8 @@
         margin-bottom: 15px;
     }
     @media screen and (max-width: 600px){           
-        column-count: 1;  
+        -moz-column-count: 1;           
+             column-count: 1;  
      }
 
 }
@@ -132,7 +136,8 @@
     img{
         display: block;
         border-radius: 0.5rem;
-        object-position: right bottom;
+        -o-object-position: right bottom;
+           object-position: right bottom;
     }
 }
 .founder-soc-list {
@@ -144,6 +149,9 @@
         margin-right: 10px;
         &:first-child{
             margin-right: 20px;
+            @media screen and (max-width: 540px){           
+                display: block; 
+             }
         }
         &:not(:first-child){
             &:hover{

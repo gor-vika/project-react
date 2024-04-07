@@ -52,7 +52,8 @@
         >li{
         display: inline-block;
         &:hover{
-            filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
+            -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
+                    filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
         }
         &:not(:last-child){
             margin-right: 25px;

@@ -28,88 +28,74 @@
     color: $davys-grey;
     margin-bottom: 100px;
 }
-// .slick-slider .slick-list .slick-track .slick-slide {
-//     height: 100%; 
-    
-// }
 
-.slick-slider .slick-prev,
-.slick-slider .slick-next{
-    position: absolute;
-    top: calc(100% + 60px);
+.slide-prev,
+.slide-next{
+    position: relative;
+    top: 40px;
     width: 48px;
     height: 48px;
-    border: 2.5px solid $black;
+    border: 2.5px solid black;
     border-radius: 50%;
-    @media screen and (max-width: 540px){           
-        top: calc(100% + 40px);     
-    }
-    &::before{
-        content: '';
-        display: block;
-        width: 15px;
-        height: 15px;
-        margin-inline: auto;
-        border-top: 2.5px solid $black;
-        border-left: 2.5px solid $black;
-        rotate: -45deg;
-    } 
+    cursor: pointer;
     &:hover{
         border: 2.5px solid $vermillion;
-        &::before{
-            border-top: 2.5px solid $vermillion;
-        border-left: 2.5px solid $vermillion;
-        }
     }
 }
-.slick-slider .slick-next{
-    left: 40px;
-    &::before{
-        rotate: 135deg;
+.slide-next{
+    left: 60px;
+    top: -8px;
+    & .arrow {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        width: 15px;
+        height: 15px;
+        transform: translate(25%, -50%) rotate(135deg);
+        border-top: 2.5px solid black;
+        border-left: 2.5px solid black;
+    } 
+}
+.slide-prev{
+    & .arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        border-top: 2.5px solid black;
+        border-left: 2.5px solid black;
     }
-    @media screen and (max-width: 540px){           
-        left: 75px;    
-    }  
 }
-.slick-slider .slick-prev{
-    @media screen and (max-width: 540px){           
-        left: 15px;    
-    }  
+.slide-next:hover .arrow,
+.slide-prev:hover .arrow {
+    border-color: $vermillion;
 }
-.slick-slide{
-    padding: 0 10px;  
+
+.swiper-slide{
     height: auto!important;
 }
-.slick-track
-{
-    display: flex !important;
-}
-.slick-slider .slick-list{
-    height: auto!important;
-}
+
 .quote.feedback-slider{
     background-color: transparent;
     width: 100%;
     padding: 0;
     position: relative;  
     
-    .feedback-item{   
+    .feedback-item{    
         width: min(95%, 570px);  
         padding: 132px 40px 40px;
         background-color: #fff;
         border-radius: 0.5rem;
         position: relative;
-        display: inline-flex !important;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
         @media screen and (max-width: 540px){           
             padding: 40px 40px 40px;    
          }
         .quote-text{
             font-size: 1.44rem;
             text-align: left;
-            font-family: 'Montserrat Alternates', sans-serif;
+            font-family: 'Montserrat Alternates', sans-serif;          
             @media screen and (max-width: 1024px){           
                 font-size: 1rem;        
             }

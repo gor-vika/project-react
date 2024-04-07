@@ -1,11 +1,11 @@
 
 .hero-section{
     background-color: $champagne;
-    padding: 160px 0 140px;
+    padding: 160px  140px;
     position: relative;
     z-index: 4;
     @media screen and (max-width: 540px){           
-        padding: 160px 0 60px;      
+        padding: 160px 15px 60px 0;      
      }
     &::before{
         content: '';
@@ -126,7 +126,7 @@
     }
     .hero-slide-platforms{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         flex-wrap: wrap;
         gap: 10px;
         position: absolute;
@@ -136,7 +136,8 @@
             width: 24px;
             height: 24px;
             &:hover{
-                filter: brightness(0) saturate(100%) invert(68%) sepia(34%) saturate(327%) hue-rotate(159deg) brightness(91%) contrast(93%);
+                -webkit-filter: brightness(0) saturate(100%) invert(68%) sepia(34%) saturate(327%) hue-rotate(159deg) brightness(91%) contrast(93%);
+                        filter: brightness(0) saturate(100%) invert(68%) sepia(34%) saturate(327%) hue-rotate(159deg) brightness(91%) contrast(93%);
             }
         }
     }
@@ -192,6 +193,8 @@
             overflow-x: auto;
             word-wrap: break-word;
             @media screen and (max-width: 768px){           
+            height: -webkit-max-content;           
+            height: -moz-max-content;           
             height: max-content;  
         } 
             

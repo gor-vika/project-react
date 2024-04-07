@@ -1,11 +1,17 @@
-import Slider from "react-slick";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { toast } from "react-toastify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css';
 
 export default function SectionSponsorSlider(){
 
     const [sponsorList, setSponsorList] = useState([])
+    const navigationPrevRef = useRef(null)
+    const navigationNextRef = useRef(null)
 
     async function getSponsorList(){
         try {
@@ -20,30 +26,7 @@ export default function SectionSponsorSlider(){
     useEffect(()=>{
         getSponsorList()
     }, [])
-    const settings = {
-        className: "center",
-        centerMode: true,
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 1
-                } 
-            }
-        ]
-      };
+   
     return(
         <section className="section beige">
             <div className="container">
@@ -51,17 +34,45 @@ export default function SectionSponsorSlider(){
                     <h3 className="subtitle sub-text feedback">Our Sponsor</h3>
                 </div>
                 <div className="subtitle-text">Our current official sponsor</div>
-                <div className="sponsor-slider">
-                    <Slider {...settings}>
-                        {sponsorList.map((item, index)=>(
-                            <div className="sponsor-block" key={index}>
-                                <div className="sponsor-logo">
+                <div className="partner-slider">
+                    <Swiper
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        navigation={{
+                            prevEl: navigationPrevRef.current,
+                            nextEl: navigationNextRef.current,
+                        }}
+                        modules={[Navigation]}
+                        loop={true}
+                        breakpoints={{
+                            540: {
+                                slidesPerView: 1,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                            }
+                            
+                        }}
+                        className="quote feedback-slider"     
+                    >
+                    {sponsorList.map((item, index) => (
+                        <SwiperSlide key={index} className="partner-block">
+                            <div className="partner-logo">
                                     <LazyLoadImage src={item.logo} alt={item.title}/>
                                 </div>
-                                <div className="sponsor-desc">{item.description}</div>
-                            </div>
-                        ))}
-                    </Slider>
+                                <div className="partner-desc">{item.description}</div>
+                        </SwiperSlide>
+                    ))}
+                    <div ref={navigationPrevRef} className="slide-prev">
+                        <span className="arrow"></span>
+                    </div>
+                    <div ref={navigationNextRef} className="slide-next">
+                        <span className="arrow"></span>
+                    </div>
+                </Swiper>
                 </div>
             </div>
         </section>

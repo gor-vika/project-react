@@ -1,16 +1,13 @@
-.sponsor-block{
+.partner-block{
     background-color: #fff;
     border: 1.61px solid $black;
     border-radius: 0.75rem;
     padding: 40px 50px 30px;
-    width: min(95%, 570px);
-    height: 245px;
-    overflow: scroll;
     text-align: center;
     @media screen and (max-width: 540px){           
         padding: 15px;     
     }
-    .sponsor-logo{     
+    .partner-logo{     
         display: flex;
         justify-content: center;
         padding-bottom: 20px;
@@ -19,10 +16,11 @@
         img{
             width: 52%;
             aspect-ratio: 300/54;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
         }
     }
-    .sponsor-desc{
+    .partner-desc{
         font-size: 0.88rem;
         color: $davys-grey;
     }

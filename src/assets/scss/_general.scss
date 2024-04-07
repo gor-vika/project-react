@@ -16,7 +16,8 @@ img{
     vertical-align: top;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 a, button{
     transition: all .2s ease;
@@ -57,5 +58,11 @@ main{
         position: absolute;
         top: 47%;
         left: 47%;
+        @media screen and (max-width: 540px){           
+            left: 44%;
+         }
+         @media screen and (max-width: 450px){           
+            left: 40%;
+         }
     }
 }
