@@ -20,6 +20,20 @@
             "name": "Luna lovegood,",
             "platform": "assets/img/icons-sprite.svg#applePodcast",
             "platformTitle": "Apple Podcasts"
+        },
+        {
+            "text": "I use the podcast app every day, and it's always a pleasant and convenient experience! Thanks to its intuitive interface and seamless functionality, I can discover and enjoy my favorite shows, regardless of my location.",
+            "photo": "assets/img/Emili.png",
+            "name": "Emily Blunt,",
+            "platform": "assets/img/icons-sprite.svg#googlePodcast",
+            "platformTitle": "Google Podcasts"
+        },
+        {
+            "text": "The podcast app has become indispensable to me. Its extensive library and user-friendly design make it easy for me to explore and enjoy a wide range of podcasts on various topics.",
+            "photo": "assets/img/Luna.png",
+            "name": "Luna lovegood,",
+            "platform": "assets/img/icons-sprite.svg#applePodcast",
+            "platformTitle": "Apple Podcasts"
         }
     ],
     [
