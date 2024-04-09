@@ -45,11 +45,7 @@ export default function SiteHeader(){
             </div>
         </div>
 
-        <Modal title='Please, contact us' isOpen={isOpen} onClose={()=>{setIsOpen(false)}} children={<SiteForm />}>
-
-        </Modal>
-        
-       
+        <Modal title='Please, contact us' isOpen={isOpen} onClose={()=>{setIsOpen(false)}} children={<SiteForm />}></Modal> 
     </header>
      
     <HamburgerMenu mobileMenu={mobileMenu} toggleMenu={toggleMenu} />

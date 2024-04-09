@@ -16,12 +16,6 @@ export default createHashRouter([
       {
         path: '/',
         Component: HomePage,
-        children: [
-          {
-            
-            Component: SectionFeedback
-          }
-        ]
       },
       {
         path: 'episodes',

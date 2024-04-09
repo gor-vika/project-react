@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Pagination(props){
+export default function Pagination(props){
   const { total, page } = props
   const [isFirst, setFirst] = useState(false);
   const [isLast, setLast] = useState(false);
@@ -99,5 +99,3 @@ function Pagination(props){
     </div>
   )
 }
-
-export default Pagination

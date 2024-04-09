@@ -13,11 +13,11 @@ export default function SiteFooter(){
         <div className="container flex">
             <div className="copyright-block">
                 <div className="logo">
-                    <a href="#">
+                    <Link to='/'>
                         <LazyLoadImage 
                         src={logo} alt="logo"
                         />
-                    </a>
+                    </Link>
                 </div>
                 <div className="copyright">&copy;2024</div>
                 <p className="copyright-text">All materials on this website are the property of Company X.</p>
@@ -55,7 +55,7 @@ export default function SiteFooter(){
             <div className="footer-menu-block">
                 <ul>
                     <li><Link to='episodes'>Episodes</Link></li>
-                    <li><Link to="/#pricing">Pricing</Link></li> {/*не працює перенаправлення до секції? */}
+                    <li><Link to="/#pricing">Pricing</Link></li>
                 </ul>
             </div>
             <div className="footer-platforms-block">

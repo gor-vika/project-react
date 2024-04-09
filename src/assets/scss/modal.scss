@@ -55,15 +55,13 @@
         }
     }
     &-body{
-        padding: 20px 10px 20px 20px;
-        
-        
+        padding: 20px 10px 20px 20px;   
     }
     &-content{
         overflow: auto;
         max-height: calc(100vh - 60px - 74px - 40px);
         padding-right: 10px;
-        > *:last-child{
+         *:last-child{
             margin-bottom: 0;
         }
     }
@@ -74,8 +72,8 @@
         .btn-block{
             width: 100%;
         }
-        .form-button >div:last-child,
-        .form-button > div:first-child {
+        .form-button div:last-child,
+        .form-button div:first-child {
             display: none;
         }
         .input-block{

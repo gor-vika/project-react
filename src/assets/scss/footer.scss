@@ -49,7 +49,7 @@
     }
 }
 .footer-social-list {
-        >li{
+        li{
         display: inline-block;
         &:hover{
             -webkit-filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(999%) hue-rotate(328deg) brightness(94%) contrast(95%);
@@ -58,22 +58,22 @@
         &:not(:last-child){
             margin-right: 25px;
         }
-        & a > svg{
+        a svg{
         width: 24px;
         height: 24px;
         }
     }
 }
 .footer-menu-block {
-    > ul {
+    ul {
         li a{
             text-decoration: none;
             color: $davys-grey;
         }
-        &>li:hover a{
+        & li:hover a{
             color: $vermillion;
         }
-        &>li:not(:last-child){
+        & li:not(:last-child){
             margin-bottom: 20px;
         }
     
@@ -100,7 +100,7 @@
         scale: 1.1;
     }
 }
-.footer-store-platforms > li{
+.footer-store-platforms li{
     width: 36px;
     height: 36px;
     display: inline-block;
