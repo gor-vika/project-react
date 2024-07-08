@@ -1,8 +1,13 @@
 import SiteBtn from "./common/SiteBtn"
 import Episodes from "./Episodes"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export default function SectionEpisodes(){
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/episodes')
+    }
 
     return (
         <section className="section beige">
@@ -12,9 +17,11 @@ export default function SectionEpisodes(){
             </div>
             <div className="subtitle-text">Available on your favorite platform</div>
             <Episodes search='podcast' qty='6'/>
-            <Link to='episodes'>
-                <SiteBtn btnText='BROWSE ALL EPISODES' className='btn main-btn' classWrap='btn-block btn-section' />
-            </Link>
+            {/* <Link to='episodes'> */}
+            <div className="btn-block btn-section">
+                <SiteBtn btnText='BROWSE ALL EPISODES' className='btn main-btn' onClick={handleClick} />
+            </div>
+            {/* </Link> */}
         </div>
     </section>
     )

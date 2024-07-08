@@ -21,7 +21,7 @@ export default function PodcastItem(props){
                 <div className="text-content flex">
                 {item.audio_preview_url ? (
                     <div className='episode-play'>
-                        <Link to={item.id}>Click to listen</Link>
+                        <Link to={`/episodes/${item.id}`}>Click to listen</Link>
                     </div>
                     ) : null}
                     <h5 className="episode-title">{item.name}</h5>
